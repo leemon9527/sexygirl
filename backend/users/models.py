@@ -38,8 +38,12 @@ class User(AbstractBaseUser):
     email = models.EmailField(unique=True, verbose_name=u'邮箱')
     avator = models.CharField(max_length=255,
                               default='https://apic.douyucdn.cn/upload/avanew/face/201709/04/01/95a344efd1141fd073397fa78cf952ae_big.jpg')
+    about = models.TextField('关于我', max_length=1000, default='', blank=True)
     roles = models.ManyToManyField('Role', blank=True, verbose_name=u'角色')
-    create_date = models.DateField(auto_now_add=True, verbose_name=u'创建时间')
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name=u'注册时间')
+    create_area = models.CharField(max_length=255, verbose_name='注册地区')
+    last_login_time = models.DateTimeField(auto_now_add=True, blank=True, verbose_name=u'最后登录时间')
+    last_login_area = models.CharField(max_length=255, blank=True, verbose_name='最后登录地区')
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 

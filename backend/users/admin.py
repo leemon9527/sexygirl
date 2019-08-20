@@ -6,7 +6,7 @@ from users.models import User, Role
 
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('username', 'email', 'avator', 'create_date', 'is_active', 'is_admin')
+    list_display = ('username', 'email', 'avator', 'create_time', 'is_active', 'is_admin')
 
 
 class RoleAdmin(admin.ModelAdmin):

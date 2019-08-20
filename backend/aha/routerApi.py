@@ -14,3 +14,9 @@ from tools.views import UploadViewSet, FileUploadViewSet
 
 router.register(r'uploads', UploadViewSet)
 router.register(r'fileuploads', FileUploadViewSet)
+
+from blogs.views import PostViewSet, TagViewSet, CommentViewSet
+
+router.register(r'posts', PostViewSet)
+router.register(r'tags', TagViewSet)
+router.register(r'comments', CommentViewSet)

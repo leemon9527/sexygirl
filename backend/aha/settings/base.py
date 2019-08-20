@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'corsheaders',  # 跨域
     'users',
     'tools',
+    'blogs',
 ]
 
 MIDDLEWARE = [
